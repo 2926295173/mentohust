@@ -55,4 +55,14 @@ jobs:
         sudo apt-get install autoconf automake libtool autopoint
         autoupdate
         ./autogen.sh
-        ls
+
+
+    - name: Set reusable string
+      # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
+      id: string
+      shell: bash
+      run: |
+        ./configure
+        make
+        make install
+        
