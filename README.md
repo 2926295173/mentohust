@@ -84,6 +84,23 @@ sudo ln -s libpcap.so.0.x.y /usr/lib/libpcap.so.0.x
 增加了参数 -S ，华南农业大学使用办公账号出现 ‘用户使用了不允许的接入方式!(有线网络请选择“有线1x上网”服务) ’可以使用 -S 1,或者配置文件增加‘  Service=1 ’
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 开发说明
 本项目为HustMoon开发的MentoHUST （<http://mentohust.googlecode.com/>）的接续。本软件采用The GNU Build System。
 
