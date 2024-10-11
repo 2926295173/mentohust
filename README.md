@@ -5,13 +5,6 @@
 # 开发说明
 本项目为HustMoon开发的MentoHUST （<http://mentohust.googlecode.com/>）的接续。本软件采用The GNU Build System。
 
-## TODO
-
-开发的主要目标是使得OpenWRT下的MentoHUST更加友好，对其他平台的适配暂无计划。
-
-* 整理原有的Issues
-* 整理各类路由器上的编译指南，尽量提供编译好的固件。
-
 # 参与者信息与权责声明
 
 1. 本程序所有涉及锐捷赛尔认证的功能均是来自前辈公开代码及抓包分析。
