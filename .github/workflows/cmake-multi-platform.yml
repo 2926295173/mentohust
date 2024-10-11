@@ -53,5 +53,6 @@ jobs:
       run: | #>
         sudo apt-get install gettext -y
         sudo apt-get install autoconf automake libtool autopoint
+        autoupdate
         ./autogen.sh
         ls
