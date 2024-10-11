@@ -8,11 +8,11 @@
 
 # 使用方法
 
-##如果确定xrgsu可用
+## 如果确定xrgsu可用
 
 打开终端输入`sudo mentohust`运行即可。
 
-##如果不确定xrgsu的可用性
+## 如果不确定xrgsu的可用性
 
 请切换到***32位版***Windows锐捷所在目录，然后输入以下命令：
 ```
@@ -49,16 +49,16 @@ sudo mentohust -f/etc/mentohust/data.mpf -w
 9. 以后认证只需打开终端，输入`sudo mentohust`，回车。
 10. 要修改某些参数请输入`mentohust -h`查看帮助信息并据此修改，例如修改密码sudo mentohust -pNewPassword -w，要临时修改则不加-w参数。
 
-##如何退出
+## 如何退出
 不以后台模式运行MentoHUST时，按Ctrl+C即可退出；后台运行时使用`sudo mentohust -k`退出认证。
 
-##查看命令行选项说明
+## 查看命令行选项说明
 ```
 mentohust -h
 ```
 更详细的帮助信息请参考：http://wiki.ubuntu.org.cn/锐捷、赛尔认证MentoHUST
 
-##修改认证参数
+## 修改认证参数
 请根据帮助信息操作，例如修改用户名和密码并保存：
 ```
 sudo mentohust -uUsername -pPassword -w
