@@ -65,7 +65,8 @@ jobs:
         ./configure
         make
         echo "make success"
-        ls
+        rpmbuild -ba mentohust.spec
+        tree 
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
