@@ -64,4 +64,11 @@ jobs:
       run: |
         ./configure
         make
-        
+        echo "make success"
+        ls
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: mentohust
+        path: ./mentohust  # 请根据你实际编译后文件的路径进行修改
