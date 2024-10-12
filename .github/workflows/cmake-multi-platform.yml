@@ -67,13 +67,15 @@ jobs:
     - name: RPM DEB
       run: |
         tree
-        echo "start deb build"
-        debuild -us -uc
-        echo "start rpm build"
-        rpmbuild -ba mentohust.spec
+        ls src/
+        
+      # echo "start deb build"
+        # debuild -us -uc
+        # echo "start rpm build"
+        # rpmbuild -ba mentohust.spec
 
     - name: Upload artifact
       uses: actions/upload-artifact@v3
       with:
         name: mentohust
-        path: ./mentohust  # 请根据你实际编译后文件的路径进行修改
+        path: ./src/mentohust  # 请根据你实际编译后文件的路径进行修改
