@@ -43,7 +43,6 @@ jobs:
     - name: Set reusable strings
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
       id: strings
-      shell: bash
       run: |
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
@@ -60,12 +59,16 @@ jobs:
     - name: Make
       # Turn repeated input strings (such as the build output directory) into step outputs. These step outputs can be used throughout the workflow file.
       id: string
-      shell: bash
       run: |
         ./configure
         make
         echo "make success"
+
+    - name: RPM DEB
+      run: |
+        echo "start rpm build"
         rpmbuild -ba mentohust.spec
+        echo "start deb build"
         debuild -us -uc
         tree 
 
