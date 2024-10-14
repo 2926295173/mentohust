@@ -77,5 +77,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: mentohust
+        name: mentohust-${{ matrix.os }}-${{ matrix.version }}
         path: ./src/mentohust  # 请根据你实际编译后文件的路径进行修改
