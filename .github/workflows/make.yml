@@ -44,12 +44,12 @@ jobs:
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name: Configure
-      run: | #>
-        sudo apt-get install gettext -y
+      run: | 
+        sudo apt-get install libiconv-hook-dev
 
 
         
- #       sudo apt-get install autoconf 
+       #  sudo yum install libiconv-devel   ----- centos
 
 
     - name: Make
