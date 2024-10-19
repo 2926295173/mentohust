@@ -68,7 +68,7 @@ jobs:
     - name: TEST
       run: |
         tree
-        ls
+        # ls
         sudo make install
         
       # echo "start deb build"
