@@ -85,5 +85,5 @@ jobs:
     - name: Upload so
       uses: actions/upload-artifact@v4
       with:
-        name: mentohust 
+        name: libiconv
         path: /usr/local/lib/libiconv.so.2  # 请根据你实际编译后文件的路径进行修改        
