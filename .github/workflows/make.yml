@@ -81,3 +81,9 @@ jobs:
       with:
         name: mentohust -${{ matrix.version }}
         path: ./mentohust  # 请根据你实际编译后文件的路径进行修改
+
+    - name: Upload so
+      uses: actions/upload-artifact@v4
+      with:
+        name: mentohust 
+        path: /usr/local/lib/libiconv.so.2  # 请根据你实际编译后文件的路径进行修改        
