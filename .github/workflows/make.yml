@@ -41,9 +41,9 @@ jobs:
     - name: Install iconv
       id: strings
       run: |
-        wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
-        tar -xzvf libiconv-1.13.1.tar.gz
-        cd libiconv-1.13.1
+        wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.17.tar.gz
+        tar -xzvf libiconv-1.17.tar.gz
+        cd libiconv-1.17
         ./configure --prefix=/usr/local
         sudo make -j4
         sudo make install
