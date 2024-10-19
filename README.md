@@ -13,8 +13,13 @@
 感谢mentohust作者的贡献，已加入github.com/hyrathb/mentohust仓库中的AUTHORS
 ## 编译
 使用终端执行以下命令：
-git clone https://github.com/vincenttsang/mentohust-macos && cd mentohust-macos
+
+```
+git clone https://github.com/vincenttsang/mentohust-macos 
+cd mentohust-macos
 make
+```
+
 成功后将会产生一个mentohust可执行文件，架构与编译这个程序的Mac的架构一致
 ## 安装
 sudo make install
