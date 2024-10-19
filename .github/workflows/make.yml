@@ -46,10 +46,7 @@ jobs:
     - name: Configure
       run: | 
         sudo apt-get install libiconv-hook-dev
-
-
-        
-       #  sudo yum install libiconv-devel   ----- centos
+        sudo yum install libiconv-devel 
 
 
     - name: Make
