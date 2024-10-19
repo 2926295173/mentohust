@@ -58,10 +58,11 @@ jobs:
         make
         echo "make success"
 
-    - name: RPM DEB
+    - name: TEST
       run: |
         tree
         ls
+        sudo make install
         
       # echo "start deb build"
         # debuild -us -uc
@@ -72,4 +73,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: mentohust-${{ matrix.os }}-${{ matrix.version }}
-        path: ./src/mentohust  # 请根据你实际编译后文件的路径进行修改
+        path: ./mentohust  # 请根据你实际编译后文件的路径进行修改
