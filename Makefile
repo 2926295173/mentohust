@@ -1,19 +1,19 @@
 CC = clang
-
+CFLAGS = -O3
 
 
 mentohust: mentohust.o myini.o md5.o mycheck.o dlfunc.o myfunc.o mystate.o myconfig.o checkV4.o rjmd5.o rjripemd128.o rjsha1.o rjtiger_sbox.o rjtiger.o rjwhirlpool_sbox.o rjwhirlpool.o byte_order.o
-	$(CC) -o $@ $^ -liconv -O3
+	$(CC) $(CFLAGS)  -o $@ $^ -liconv -O3
 mentohust.o: mentohust.c myconfig.h mystate.h myfunc.h dlfunc.h
-	$(CC) -c $<
+	$(CC) $(CFLAGS) -c $<
 dlfunc.o: dlfunc.c
-	$(CC) -c $<
+	$(CC) $(CFLAGS) -c $<
 myfunc.o: myfunc.c md5.h mycheck.h
-	$(CC) -c $<
+	$(CC) $(CFLAGS) -c $<
 rjsha1.o: rjsha1.c byte_order.c byte_order.h
-	$(CC) -c $<
+	$(CC) $(CFLAGS) -c $<
 ..c.o:
-	$(CC) -c $<
+	$(CC) $(CFLAGS) -c $<
 clean:
 	@rm -f *.o mentohust
 	@echo "清理完成"
