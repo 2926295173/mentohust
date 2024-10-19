@@ -22,8 +22,14 @@ make
 
 成功后将会产生一个mentohust可执行文件，架构与编译这个程序的Mac的架构一致
 ## 安装
+```
 sudo make install
+```
 ## 卸载
+```
 sudo make uninstall
+```
 ## 清理源码目录
+```
 make clean
+```
