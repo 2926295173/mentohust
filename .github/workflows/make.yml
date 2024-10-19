@@ -38,10 +38,19 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set reusable strings
+    - name: Install iconv
       id: strings
       run: |
-        echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
+        wget http://ftp.gnu.org/pub/gnu/libiconv/libiconv-1.13.1.tar.gz
+        tar -xzvf libiconv-1.13.1.tar.gz
+        cd libiconv-1.13.1
+        ./configure --prefix=/usr/local
+        sudo make -j4
+        sudo make install
+        sudo ln -s /usr/local/lib/libiconv.so /usr/lib
+        sudo ln -s /usr/local/lib/libiconv.so.2 /usr/lib/libiconv.so.2
+
+
 
     - name: Configure
       run: | 
