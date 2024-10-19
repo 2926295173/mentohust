@@ -22,7 +22,7 @@ install:
 	@echo "正在复制mentohust至/usr/local/bin"
 	@cp mentohust /usr/local/bin
 	@echo "正在设置用户和权限" && chmod 4755 /usr/local/bin/mentohust && chmod a+w /var/run
-        @echo "安装完成"
+	@echo "安装完成"
 uninstall:
 	@echo "提示：移除mentohust需要root权限"
 	@echo "移除mentohust配置文件" && rm -rf /etc/mentohust.conf
