@@ -1,15 +1,19 @@
+CC = clang
+
+
+
 mentohust: mentohust.o myini.o md5.o mycheck.o dlfunc.o myfunc.o mystate.o myconfig.o checkV4.o rjmd5.o rjripemd128.o rjsha1.o rjtiger_sbox.o rjtiger.o rjwhirlpool_sbox.o rjwhirlpool.o byte_order.o
-	clang -o $@ $^ -liconv -O3
+	$(CC) -o $@ $^ -liconv -O3
 mentohust.o: mentohust.c myconfig.h mystate.h myfunc.h dlfunc.h
-	clang -c $<
+	$(CC) -c $<
 dlfunc.o: dlfunc.c
-	clang -c $<
+	$(CC) -c $<
 myfunc.o: myfunc.c md5.h mycheck.h
-	clang -c $<
+	$(CC) -c $<
 rjsha1.o: rjsha1.c byte_order.c byte_order.h
-	clang -c $<
+	$(CC) -c $<
 ..c.o:
-	clang -c $<
+	$(CC) -c $<
 clean:
 	@rm -f *.o mentohust
 	@echo "清理完成"
